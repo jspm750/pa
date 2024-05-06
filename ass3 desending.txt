@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<p18f4550.h>
+void main(void)
+int i,j,temp;
+int a[]={7,4,6};
+for(i=0; i<=2; i++){
+for(j=i+1; j<=2; j++){
+if(a[i]<a[j]){
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+TRISB=0;
+TRISC=0;
+TRISD=0;
+PORTB=a[0];
+PORTC=a[1];
+PORTD=a[2];
+}
